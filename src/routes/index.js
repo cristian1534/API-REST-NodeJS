@@ -1,14 +1,13 @@
+const path = require('path')
+
 const { Router } = require('express'); // me permite crear rutas
 const router = Router();
 
 
 //routes
-router.get('/test', (req, res)=>{
-    const data={
-        'name':'Cristian',
-        'country': 'Ukraine'
-    }
-    res.json(data);
+router.get('/', (req, res)=>{
+    
+    res.sendFile(path.resolve(__dirname,'index.html'))
 });
 
 module.exports = router;

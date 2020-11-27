@@ -17,6 +17,8 @@ app.use(require('./routes/index'));
 app.use('/api/movies', require('./routes/movies')); //url /api/movies....
 app.use('/api/users', require('./routes/users')); //jsonplaceholder website
 app.use('/api/posts', require('./routes/posts'))
+app.use('/', require('./routes/index'))
+
 
 
 //starting the server
